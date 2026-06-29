@@ -1,0 +1,16 @@
+{
+  "name": "moving-windmills-mcdonalds",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serve . -l 5173 --no-clipboard",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}
