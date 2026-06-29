@@ -20,9 +20,9 @@
     }
   }
 
-  if (source === 'happymeal' || source === 'qrcode') {
+  if (source === 'happymeal') {
     var hook = document.querySelector('.hero-sub-hook');
-    if (hook) hook.textContent = 'You scanned the book. Welcome to the real story.';
+    if (hook) hook.textContent = 'You saw us on a Happy Meal. Welcome to the real story.';
   }
 })();
 
