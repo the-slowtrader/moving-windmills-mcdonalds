@@ -20,7 +20,10 @@
     }
   }
 
-  if (source === 'happymeal') {
+  if (source === 'worldcup') {
+    var hook = document.querySelector('.hero-sub-hook');
+    if (hook) hook.textContent = 'You saw us at the World Cup. Welcome to the real story.';
+  } else if (source === 'happymeal') {
     var hook = document.querySelector('.hero-sub-hook');
     if (hook) hook.textContent = 'You saw us on a Happy Meal. Welcome to the real story.';
   }

@@ -192,7 +192,7 @@ address {
   position: relative;
   min-height: 100dvh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -248,7 +248,7 @@ address {
   position: relative;
   z-index: 2;
   padding: var(--space-4) var(--space-3) var(--space-3);
-  padding-top: calc(var(--space-4) + 40px);
+  padding-top: var(--space-7);
   max-width: 720px;
 }
 
@@ -1090,7 +1090,7 @@ blockquote cite {
 
   .hero-content {
     padding: var(--space-4) var(--space-6) var(--space-3);
-    padding-top: calc(var(--space-4) + 48px);
+    padding-top: var(--space-7);
   }
 
   .hero-ctas {
@@ -1181,7 +1181,7 @@ blockquote cite {
 
   .hero-content {
     padding: var(--space-5) var(--space-6) var(--space-4);
-    padding-top: calc(var(--space-5) + 48px);
+    padding-top: var(--space-8);
   }
 
   .offer-card {
