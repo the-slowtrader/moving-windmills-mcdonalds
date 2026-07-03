@@ -1333,6 +1333,20 @@ blockquote cite {
   background: var(--color-warm);
 }
 
+.mwp-brand .grace-text p {
+  color: var(--color-night);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+}
+
+.mwp-brand .grace-hook {
+  color: var(--color-primary);
+}
+
+.mwp-brand .stat-label {
+  color: var(--color-charcoal);
+}
+
 .mwp-brand .section-heading {
   color: var(--color-primary-dark);
 }
