@@ -1268,3 +1268,282 @@ blockquote cite {
     transform: none;
   }
 }
+
+/* ═══════════════════════════════════
+   MWP BRAND THEME (book.html)
+   Overrides McDonald's red/yellow with
+   MWP's own palette when .mwp-brand is
+   on <body>.
+═══════════════════════════════════ */
+.mwp-brand {
+  --color-primary:      #2D6A4F;
+  --color-primary-dark:  #1B4332;
+  --color-primary-light: #52B788;
+  --color-accent:       #D4A843;
+  --color-accent-dark:  #B8922E;
+  --color-warm:         #F5E6D0;
+}
+
+.mwp-brand .hero-bg {
+  background: var(--color-primary);
+}
+
+.mwp-brand .hero-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(45,106,79,0.85) 0%,
+    rgba(45,106,79,0.6) 40%,
+    rgba(45,106,79,0.4) 100%
+  );
+}
+
+.mwp-brand .partnership-badge {
+  background: rgba(0,0,0,0.35);
+}
+
+.mwp-brand .hero-ctas .btn-primary {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 16px rgba(212,168,67,0.4);
+}
+
+.mwp-brand .hero-ctas .btn-primary:hover {
+  background: var(--color-accent-dark);
+  color: var(--color-primary-dark);
+}
+
+.mwp-brand .hero-ctas .btn-secondary {
+  border-color: rgba(255,255,255,0.5);
+  color: var(--color-white);
+}
+
+.mwp-brand .hero-ctas .btn-secondary:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.mwp-brand .book-eyebrow {
+  color: var(--color-primary);
+}
+
+.mwp-brand .book-stat {
+  color: var(--color-primary);
+}
+
+.mwp-brand .grace-house {
+  background: var(--color-warm);
+}
+
+.mwp-brand .section-heading {
+  color: var(--color-primary-dark);
+}
+
+.mwp-brand .grace-hook {
+  color: var(--color-primary);
+}
+
+.mwp-brand .world-cup-callout {
+  background: var(--color-primary-dark);
+}
+
+.mwp-brand .wc-eyebrow {
+  color: var(--color-accent);
+}
+
+.mwp-brand .social-proof {
+  background: var(--color-primary-dark);
+}
+
+.mwp-brand blockquote::before {
+  color: var(--color-primary-light);
+}
+
+.mwp-brand blockquote cite {
+  color: var(--color-accent);
+}
+
+.mwp-brand .cred-badge:first-child,
+.mwp-brand .cred-badge:nth-child(2) {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.mwp-brand .the-current {
+  background: var(--color-warm);
+}
+
+.mwp-brand .offer-card::before {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+}
+
+.mwp-brand .offer-price {
+  color: var(--color-primary);
+}
+
+.mwp-brand .offer-col h3 {
+  color: var(--color-primary);
+}
+
+.mwp-brand .btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 16px rgba(45,106,79,0.3);
+}
+
+.mwp-brand .btn-primary:hover {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.mwp-brand .email-capture {
+  background: var(--color-primary);
+  background-image: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, #3A7D5C 100%);
+}
+
+.mwp-brand .form-input {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.mwp-brand .email-capture .btn-primary {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+.mwp-brand .email-capture .btn-primary:hover {
+  background: var(--color-accent-dark);
+}
+
+.mwp-brand .site-footer {
+  background: var(--color-primary-dark);
+}
+
+.mwp-brand .receipt-card {
+  transform: rotate(-1deg);
+}
+
+.mwp-brand .stat-number {
+  color: var(--color-primary);
+}
+
+/* Download CTA card */
+.download-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: var(--space-5) var(--space-4);
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.download-card h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-1);
+}
+
+.download-card .download-sub {
+  color: var(--color-stone);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-body);
+}
+
+.download-card .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.download-card .form-input {
+  border: 2px solid #E0E0E0;
+  border-radius: 100px;
+  padding: 14px 20px;
+  font-size: var(--text-body);
+  color: var(--color-night);
+  background: var(--color-white);
+}
+
+.download-card .form-input::placeholder {
+  color: var(--color-stone);
+}
+
+.download-card .form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.download-card .btn-primary {
+  width: 100%;
+}
+
+.download-card .form-error {
+  color: var(--color-red);
+  font-size: var(--text-small);
+  margin-top: var(--space-1);
+}
+
+.download-card .form-fine {
+  font-size: var(--text-micro);
+  color: var(--color-stone);
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .download-card {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .download-card .form-row {
+    flex-direction: row;
+  }
+
+  .download-card .form-input {
+    flex: 1;
+  }
+
+  .download-card .btn-primary {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Soft support section */
+.soft-support {
+  padding: var(--space-7) 0;
+  background: var(--color-white);
+  text-align: center;
+}
+
+.soft-support h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.soft-support p {
+  max-width: 600px;
+  margin: 0 auto var(--space-3);
+  color: var(--color-charcoal);
+}
+
+.soft-support .btn {
+  display: inline-block;
+}
+
+.soft-support .btn-outline {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: var(--text-body);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.soft-support .btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
