@@ -24,6 +24,8 @@
     var hook = document.querySelector('.hero-sub-hook');
     if (hook) hook.textContent = 'You saw us at the World Cup. Welcome to the real story.';
   } else if (source === 'happymeal') {
+    var tagline = document.querySelector('.hero-tagline');
+    if (tagline) tagline.textContent = 'You scanned a Happy Meal. Welcome to the real story.';
     var hook = document.querySelector('.hero-sub-hook');
     if (hook) hook.textContent = 'You saw us on a Happy Meal. Welcome to the real story.';
   }
@@ -198,75 +200,131 @@ document.addEventListener('click', function(e) {
 })();
 
 /* ═══════════════════════════════════
-   EMAIL FORM HANDLING
+   FORM HANDLING — supports multiple forms
+   (downloadForm, connectForm, emailForm)
 ═══════════════════════════════════ */
-(function initEmailForm() {
-  var form = document.getElementById('emailForm');
-  if (!form) return;
+(function initForms() {
+  var alreadySubmitted = sessionStorage.getItem('mwp_email_submitted');
 
-  var errorEl = form.querySelector('.form-error');
-  var submitBtn = form.querySelector('.btn-submit');
-  var successEl = document.getElementById('formSuccess');
+  var connectForm = document.getElementById('connectForm');
+  var alreadyEl = document.getElementById('alreadySignedUp');
+  var downloadForm = document.getElementById('downloadForm');
+  var downloadSuccess = document.getElementById('downloadSuccess');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    errorEl.textContent = '';
-
-    var emailInput = form.querySelector('#email-input');
-    var email = emailInput.value.trim();
-
-    if (!email || !emailInput.validity.valid) {
-      errorEl.textContent = 'Please enter a valid email address.';
-      return;
+  if (alreadySubmitted) {
+    if (downloadForm && downloadSuccess) {
+      downloadForm.hidden = true;
+      downloadSuccess.hidden = false;
     }
+    if (connectForm && alreadyEl) {
+      connectForm.hidden = true;
+      alreadyEl.hidden = false;
+    }
+  }
 
-    submitBtn.classList.add('is-loading');
-    submitBtn.disabled = true;
+  function handleSubmit(form, successEl, eventName) {
+    if (!form) return;
+    var errorEl = form.querySelector('.form-error');
+    var submitBtn = form.querySelector('.btn-submit');
+    var fallbackEl = form.parentElement ? form.parentElement.querySelector('.form-error-download') : null;
 
-    /*
-     * Mailchimp integration placeholder.
-     * Replace MAILCHIMP_URL in the form action attribute and
-     * uncomment the fetch below when the Mailchimp account is configured.
-     *
-     * For now, simulate a successful submission after 1 second.
-     */
-    setTimeout(function() {
-      submitBtn.classList.remove('is-loading');
-      submitBtn.disabled = false;
-      form.hidden = true;
-      successEl.hidden = false;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (errorEl) errorEl.textContent = '';
 
-      if (typeof gtag === 'function') {
-        gtag('event', 'email_capture_submit', { email_domain: email.split('@')[1] });
+      var emailInput = form.querySelector('input[type="email"]');
+      var email = emailInput.value.trim();
+
+      if (!email || !emailInput.validity.valid) {
+        if (errorEl) errorEl.textContent = 'Please enter a valid email address.';
+        return;
       }
-    }, 1000);
 
-    /*
-    // Real Mailchimp submission:
-    var formData = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      mode: 'no-cors'
-    })
-    .then(function() {
-      submitBtn.classList.remove('is-loading');
-      form.hidden = true;
-      successEl.hidden = false;
-      if (typeof gtag === 'function') {
-        gtag('event', 'email_capture_submit', { email_domain: email.split('@')[1] });
-      }
-    })
-    .catch(function() {
-      submitBtn.classList.remove('is-loading');
-      submitBtn.disabled = false;
-      errorEl.textContent = 'Something went wrong. Try again?';
-      if (typeof gtag === 'function') {
-        gtag('event', 'email_capture_error');
-      }
+      submitBtn.classList.add('is-loading');
+      submitBtn.disabled = true;
+
+      /*
+       * Mailchimp integration placeholder.
+       * Replace MAILCHIMP_URL in the form action attribute and
+       * uncomment the fetch below when Mailchimp is configured.
+       * Simulates success after 1 second for now.
+       */
+      setTimeout(function() {
+        submitBtn.classList.remove('is-loading');
+        submitBtn.disabled = false;
+        form.hidden = true;
+        if (successEl) successEl.hidden = false;
+
+        sessionStorage.setItem('mwp_email_submitted', 'true');
+
+        if (form.id !== 'connectForm' && connectForm && !connectForm.hidden) {
+          connectForm.hidden = true;
+          if (alreadyEl) alreadyEl.hidden = false;
+        }
+
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, { email_domain: email.split('@')[1] });
+        }
+
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
+      }, 1000);
+
+      /*
+      // Real Mailchimp submission:
+      var formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(function() {
+        submitBtn.classList.remove('is-loading');
+        form.hidden = true;
+        if (successEl) successEl.hidden = false;
+        sessionStorage.setItem('mwp_email_submitted', 'true');
+        if (form.id !== 'connectForm' && connectForm && !connectForm.hidden) {
+          connectForm.hidden = true;
+          if (alreadyEl) alreadyEl.hidden = false;
+        }
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, { email_domain: email.split('@')[1] });
+        }
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
+      })
+      .catch(function() {
+        submitBtn.classList.remove('is-loading');
+        submitBtn.disabled = false;
+        if (errorEl) errorEl.textContent = 'Something went wrong — try again?';
+        if (fallbackEl) fallbackEl.hidden = false;
+        if (typeof gtag === 'function') {
+          gtag('event', eventName + '_error');
+        }
+      });
+      */
     });
-    */
-  });
+  }
+
+  handleSubmit(
+    downloadForm,
+    downloadSuccess,
+    'guide_download_success'
+  );
+
+  handleSubmit(
+    connectForm,
+    document.getElementById('connectSuccess'),
+    'email_signup_submit'
+  );
+
+  handleSubmit(
+    document.getElementById('emailForm'),
+    document.getElementById('formSuccess'),
+    'email_capture_submit'
+  );
 })();
 
 /* ═══════════════════════════════════

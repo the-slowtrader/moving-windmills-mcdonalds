@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moving Windmills Project — The Real Story Behind the Book</title>
-  <meta name="description" content="Your child's Happy Meal book tells the true story of William Kamkwamba. Discover what happened next — and how young people in Malawi are building the future right now.">
+  <title>Moving Windmills Project — The Boy Who Harnessed the Wind | What Happened Next</title>
+  <meta name="description" content="The Happy Meal book told William's story. Here's what he's been building since — and a free activity guide for your family.">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The real story behind the book.">
-  <meta property="og:description" content="Your child's Happy Meal book tells a true story. William built a windmill and changed a village. Here's what happened next.">
+  <meta property="og:title" content="You just met William. Here's what he built.">
+  <meta property="og:description" content="The windmill was just the beginning. See what William built next — and grab a free Problem-Solver's Guide for your family.">
   <meta property="og:image" content="og-image.jpg">
   <meta property="og:url" content="">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The real story behind the book.">
-  <meta name="twitter:description" content="Your child's Happy Meal book tells a true story. Here's what happened next.">
+  <meta name="twitter:title" content="You just met William. Here's what he built.">
+  <meta name="twitter:description" content="The windmill was just the beginning. See what's happening now.">
   <meta name="twitter:image" content="og-image.jpg">
 
+  <link rel="canonical" href="">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +28,7 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Google Analytics 4 — replace G-XXXXXXXXXX -->
+  <!-- GA4 — replace G-XXXXXXXXXX -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,35 +36,43 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+
+  <!-- Meta Pixel — replace PIXEL_ID -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+  -->
 </head>
 <body class="mwp-brand">
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- ═══════════════════════════════════
-       HERO — warm welcome, not a pitch
+       SECTION 1: HERO
   ═══════════════════════════════════ -->
   <header class="hero" id="hero">
     <div class="hero-bg" role="presentation" aria-hidden="true"></div>
     <div class="hero-overlay"></div>
 
-    <div class="partnership-badge">
-      Moving Windmills Project
-    </div>
-
     <div class="hero-content">
+      <p class="hero-tagline">From the pages of a Happy Meal to the heart of Malawi.</p>
       <h1 class="hero-headline">
-        Your child just read<br>
-        a true story.<br>
-        <span class="hero-headline-accent">Here's what happened next.</span>
+        You just met William.<br>
+        <span class="hero-headline-accent">Here's what he built.</span>
       </h1>
       <p class="hero-sub">
-        The boy in the book is real. He built a windmill at 14,
-        went on to study at Dartmouth, and came back to Malawi
-        to open an innovation hub for young people.
+        The story in the book was just the beginning.
+        Here's what's been happening since.
       </p>
       <div class="hero-ctas">
-        <a href="#story" class="btn btn-primary" data-event="hero_cta_story">Read the full story</a>
-        <a href="#download" class="btn btn-secondary" data-event="hero_cta_download">Free activity guide for kids</a>
+        <a href="#story" class="btn btn-primary" data-event="hero_scroll_click">See what's happening now &darr;</a>
       </div>
     </div>
 
@@ -74,207 +84,215 @@
   <main id="main">
 
     <!-- ═══════════════════════════════════
-         THE BOOK — honor what they just read
-    ═══════════════════════════════════ -->
-    <section class="the-book" id="the-book" aria-labelledby="book-heading">
-      <div class="container">
-        <div class="book-layout animate-on-scroll">
-          <div class="book-cover">
-            <div class="img-placeholder" style="background:#FFC72C; aspect-ratio: 3/4;" role="img" aria-label="Cover of 'I Can Be a Curious Inventor' — William Kamkwamba's Happy Meal book">
-              <span class="img-placeholder-label">Book cover — "I Can Be a Curious Inventor"</span>
-            </div>
-          </div>
-          <div class="book-text">
-            <p class="book-eyebrow">McDonald's Happy Meal × Little People, BIG DREAMS</p>
-            <h2 id="book-heading" class="book-title">"I Can Be a Curious Inventor"</h2>
-            <p class="book-desc">This is the book your child brought home. It's based on a true story — a boy named William, in Malawi, who built a working windmill out of scrap metal when he was 14.</p>
-            <p class="book-desc">He's grown up now. He came back to his village and built something bigger.</p>
-            <p class="book-stat">Here's what happened next.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════
-         WILLIAM'S STORY
+         SECTION 2: THE STORY — What Happened Next
     ═══════════════════════════════════ -->
     <section class="story" id="story" aria-labelledby="story-heading">
       <div class="container">
-        <h2 id="story-heading" class="sr-only">William's Story</h2>
+        <h2 id="story-heading" class="sr-only">William's Story — What Happened Next</h2>
 
+        <!-- Beat 1: What the Book Tells You -->
         <div class="story-beat story-beat--img-left animate-on-scroll">
           <div class="story-img">
-            <div class="img-placeholder" style="background:#8B6914;" role="img" aria-label="Young William Kamkwamba in Malawi during the 2001 famine">
+            <div class="img-placeholder" style="background:#8B6914;" role="img" aria-label="Young William Kamkwamba in Malawi">
               <span class="img-placeholder-label">Young William / Malawi landscape</span>
             </div>
           </div>
           <div class="story-text">
-            <p class="story-lead">In 2001, a famine hit Malawi.</p>
-            <p>William Kamkwamba was 14. His family couldn't afford school fees. He had to drop out.</p>
+            <p class="story-lead">The book tells the story of William Kamkwamba, who built a windmill from scrap parts and a library book.</p>
+            <p>His lights came on. His community changed.</p>
+            <p>That part is true. All of it.</p>
           </div>
         </div>
 
+        <!-- Beat 2: What Happened After -->
         <div class="story-beat story-beat--img-right animate-on-scroll">
           <div class="story-img">
-            <div class="img-placeholder" style="background:#5C4A2E;" role="img" aria-label="A library book — the 'Using Energy' textbook that inspired William">
-              <span class="img-placeholder-label">Library / "Using Energy" textbook</span>
+            <div class="img-placeholder" style="background:#5C4A2E;" role="img" aria-label="William Kamkwamba at TED or with his bestselling book">
+              <span class="img-placeholder-label">William at TED / Dartmouth / book</span>
             </div>
           </div>
           <div class="story-text">
-            <p class="story-lead">But he kept going to the village library.</p>
-            <p>He found a textbook called "Using Energy" — written in English, a language he couldn't fully read. From one photograph of a windmill, he taught himself how to build one.</p>
+            <p class="story-lead">William's story traveled.</p>
+            <p>A TED talk. A bestselling book. A Netflix film. He studied in the U.S. and at African Leadership Academy.</p>
+            <p>But then he came back.</p>
           </div>
         </div>
 
+        <!-- Beat 3: The Return -->
         <div class="story-beat story-beat--img-left animate-on-scroll">
           <div class="story-img">
-            <div class="img-placeholder" style="background:#7A6842;" role="img" aria-label="The original windmill William built from scrap metal and bicycle parts">
-              <span class="img-placeholder-label">The original windmill</span>
+            <div class="img-placeholder" style="background:#7A6842;" role="img" aria-label="William working in Kasungu, Malawi — present day">
+              <span class="img-placeholder-label">William in Kasungu — present day</span>
             </div>
           </div>
           <div class="story-text">
-            <p class="story-lead">Using scrap metal, bicycle parts, and tractor components, he built a windmill that powered his family's home.</p>
-            <p>His neighbors called him crazy. Then the lights came on.</p>
+            <p class="story-lead">William returned to Wimbe &mdash; the same community where he built the windmill &mdash; and started building something bigger.</p>
           </div>
         </div>
 
-        <div class="story-beat story-beat--img-right story-beat--reveal animate-on-scroll">
+        <!-- Beat 4: Community Hubs -->
+        <div class="story-beat story-beat--img-right animate-on-scroll">
           <div class="story-img">
-            <div class="img-placeholder" style="background:#2D6A4F;" role="img" aria-label="Grace House innovation hub — the modern MWP compound in Kasungu, Malawi">
-              <span class="img-placeholder-label">Grace House compound — modern</span>
+            <div class="img-placeholder" style="background:#2D6A4F;" role="img" aria-label="MWP community hub — wide shot, bright, modern">
+              <span class="img-placeholder-label">Community hub — wide shot</span>
             </div>
           </div>
           <div class="story-text">
-            <p class="story-lead">That was 25 years ago.</p>
-            <p>Today, William runs Moving Windmills Project in Kasungu, Malawi. Young people come to learn engineering, solar technology, and farming. Over 200 have come through so far.</p>
+            <p class="story-lead">Today, Moving Windmills Project runs a network of community hubs across a 40-kilometer radius &mdash; places where young people learn engineering, solar technology, sustainable farming, and how to solve problems in their own community.</p>
+            <p>They share meals. They teach each other. People just show up.</p>
+          </div>
+        </div>
+
+        <!-- Beat 5: Right Now -->
+        <div class="story-beat story-beat--full animate-on-scroll">
+          <div class="story-grid">
+            <div class="img-placeholder grid-img" style="background:#3A5F40;" role="img" aria-label="Young people working on laptops at a community hub">
+              <span class="img-placeholder-label">Interior — laptops</span>
+            </div>
+            <div class="img-placeholder grid-img" style="background:#4A6B8A;" role="img" aria-label="Solar panels and engineering technology at the MWP compound">
+              <span class="img-placeholder-label">Solar / engineering</span>
+            </div>
+            <div class="img-placeholder grid-img" style="background:#8B6847;" role="img" aria-label="Community gathering at a hub">
+              <span class="img-placeholder-label">Community gathering</span>
+            </div>
+          </div>
+          <div class="story-text story-text--centered">
+            <p class="story-lead">Right now, young people are training at these community hubs.</p>
+            <p>Learning to do what William did &mdash; see a problem, find a way, build something.</p>
             <p class="story-kicker">The windmill was just the beginning.</p>
           </div>
         </div>
-
-        <p class="story-footnote animate-on-scroll">
-          William's full story became a <em>New York Times</em> bestseller and a Netflix film.
-          <a href="https://www.youtube.com/results?search_query=the+boy+who+harnessed+the+wind+trailer" target="_blank" rel="noopener">Watch the trailer &rarr;</a>
-        </p>
       </div>
     </section>
 
     <!-- ═══════════════════════════════════
-         GRACE HOUSE — what's happening now
+         SECTION 3: DOWNLOAD — Problem-Solver's Guide
     ═══════════════════════════════════ -->
-    <section class="grace-house" id="grace-house" aria-labelledby="grace-heading">
+    <section class="download-section" id="download" aria-labelledby="download-heading">
       <div class="container">
-        <h2 id="grace-heading" class="section-heading animate-on-scroll">What's happening now</h2>
+        <h2 id="download-heading" class="section-heading animate-on-scroll">Try it yourself.</h2>
+        <p class="download-intro animate-on-scroll">William saw a problem and built something. Now it's your turn.</p>
 
-        <div class="stat-bar animate-on-scroll">
-          <div class="stat">
-            <span class="stat-number" data-target="200">0</span><span class="stat-plus">+</span>
-            <span class="stat-label">young people learning at Grace House</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-target="50">0</span><span class="stat-percent">%</span>
-            <span class="stat-label">of Malawians are under 25</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-target="25">0</span>
-            <span class="stat-label">years since the first windmill</span>
-          </div>
-        </div>
-
-        <div class="image-grid animate-on-scroll">
-          <div class="img-placeholder grid-img" style="background:#3A5F40;" role="img" aria-label="Inside Grace House — young people working on laptops">
-            <span class="img-placeholder-label">Interior — laptops</span>
-          </div>
-          <div class="img-placeholder grid-img" style="background:#4A6B8A;" role="img" aria-label="Solar panels and windmill technology at the compound">
-            <span class="img-placeholder-label">Solar / engineering tech</span>
-          </div>
-          <div class="img-placeholder grid-img" style="background:#8B6847;" role="img" aria-label="Community gathering at Grace House">
-            <span class="img-placeholder-label">Community gathering</span>
-          </div>
-          <div class="img-placeholder grid-img" style="background:#5A7A5A;" role="img" aria-label="Aerial drone shot showing the full scale of the MWP compound">
-            <span class="img-placeholder-label">Compound — aerial</span>
-          </div>
-        </div>
-
-        <div class="grace-text animate-on-scroll">
-          <p>Grace House is where it happens. Laptops, mentorship, solar engineering, sustainable farming — all under one roof in Kasungu, Malawi.</p>
-          <p>It's not a classroom. Kids and young adults just show up. The door is always open.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════
-         DOWNLOAD — primary CTA
-         RSC Problem Solver's Guide
-    ═══════════════════════════════════ -->
-    <section class="the-current" id="download" aria-labelledby="download-heading">
-      <div class="container">
         <div class="download-card animate-on-scroll">
-          <h2 id="download-heading">A free activity guide for your kid</h2>
-          <p class="download-sub">The Problem Solver's Guide is a step-by-step activity sheet based on William's story. Print it out, hand it over, see what they build.</p>
-
-          <form class="email-form" id="emailForm" action="MAILCHIMP_URL" method="POST" novalidate>
-            <input type="hidden" name="MERGE_SOURCE" value="mcd-happymeal-book">
-            <div class="form-row">
-              <label for="email-input" class="sr-only">Email address</label>
-              <input type="email" id="email-input" name="EMAIL" placeholder="Your email address" required autocomplete="email" class="form-input">
-              <button type="submit" class="btn btn-primary btn-submit" data-event="download_guide_submit">
-                <span class="btn-text">Send me the guide</span>
-                <span class="btn-loading" aria-hidden="true">Sending...</span>
-              </button>
+          <div class="guide-preview">
+            <div class="img-placeholder" style="background:#D8F3DC; aspect-ratio: 4/5;" role="img" aria-label="Preview of the Problem-Solver's Guide PDF cover">
+              <span class="img-placeholder-label" style="color: #2D6A4F;">Problem-Solver's Guide — Preview</span>
             </div>
-            <p class="form-error" role="alert" aria-live="polite"></p>
-          </form>
-          <div class="form-success" id="formSuccess" hidden>
-            <p>Check your inbox — the Problem Solver's Guide is on its way!</p>
           </div>
 
-          <p class="form-fine">We'll also send occasional updates from Grace House. No spam. Unsubscribe anytime.</p>
+          <div class="guide-info">
+            <h3>The Problem-Solver's Guide</h3>
+            <p>A free, printable activity for families and classrooms.</p>
+            <p>Pick a problem in your community. Research it. Design a solution. Build it. Test it. Share it.</p>
+            <p class="guide-credit">Inspired by William's story and developed with the Royal Shakespeare Company.</p>
+
+            <form class="email-form" id="downloadForm" action="MAILCHIMP_URL" method="POST" novalidate>
+              <input type="hidden" name="MERGE_SOURCE" value="mcd-happymeal-2026">
+              <div class="form-row">
+                <label for="download-email" class="sr-only">Email address</label>
+                <input type="email" id="download-email" name="EMAIL" placeholder="Your email" required autocomplete="email" class="form-input">
+                <button type="submit" class="btn btn-accent btn-submit" data-event="guide_download_click">
+                  <span class="btn-text">Download the Guide (free) &rarr;</span>
+                  <span class="btn-loading" aria-hidden="true">Sending...</span>
+                </button>
+              </div>
+              <p class="form-error" role="alert" aria-live="polite"></p>
+            </form>
+            <div class="form-success" id="downloadSuccess" hidden>
+              <p>Your guide is ready &mdash; <a href="assets/downloads/problem-solvers-guide.pdf" download>Download the Problem-Solver's Guide (PDF)</a></p>
+            </div>
+            <div class="form-error-download" id="downloadFallback" hidden>
+              <p>Here's the guide anyway &mdash; <a href="assets/downloads/problem-solvers-guide.pdf" download>Download directly</a></p>
+            </div>
+            <noscript>
+              <p style="margin-top:1rem;"><a href="assets/downloads/problem-solvers-guide.pdf" download>Download the Problem-Solver's Guide (PDF)</a></p>
+            </noscript>
+
+            <p class="form-fine">We'll also send updates from the team in Malawi. Unsubscribe anytime.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ═══════════════════════════════════
-         SOCIAL PROOF — light touch
+         SECTION 4: STAY CONNECTED
     ═══════════════════════════════════ -->
-    <section class="social-proof" id="social-proof" aria-labelledby="proof-heading">
+    <section class="stay-connected" id="stay-connected" aria-labelledby="connect-heading">
       <div class="container">
-        <h2 id="proof-heading" class="sr-only">What people are saying</h2>
+        <h2 id="connect-heading" class="section-heading animate-on-scroll">Follow the story as it unfolds.</h2>
+        <p class="connect-sub animate-on-scroll">We'll send you updates from the community hubs and the team behind them.</p>
 
-        <div class="testimonials animate-on-scroll">
-          <blockquote>
-            <p>"I fell in love. The vision that Moving Windmills has is absolutely incredible."</p>
-            <cite>— Rehema, MWP Fellow (from Tanzania)</cite>
-          </blockquote>
-          <blockquote>
-            <p>"This is not just tea — it's healing."</p>
-            <cite>— Women's Tea participant, Grace House</cite>
-          </blockquote>
+        <form class="email-form connect-form animate-on-scroll" id="connectForm" action="MAILCHIMP_URL" method="POST" novalidate>
+          <input type="hidden" name="MERGE_SOURCE" value="mcd-happymeal-2026">
+          <div class="form-row form-row--inline">
+            <label for="connect-email" class="sr-only">Email address</label>
+            <input type="email" id="connect-email" name="EMAIL" placeholder="Your email" required autocomplete="email" class="form-input">
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span class="btn-text">Stay Connected &rarr;</span>
+              <span class="btn-loading" aria-hidden="true">Sending...</span>
+            </button>
+          </div>
+          <p class="form-error" role="alert" aria-live="polite"></p>
+        </form>
+        <div class="form-success" id="connectSuccess" hidden>
+          <p>You're signed up &mdash; check your inbox.</p>
         </div>
-
-        <div class="credibility-bar animate-on-scroll">
-          <span class="cred-badge">As seen on Netflix</span>
-          <span class="cred-badge">New York Times Bestseller</span>
-          <span class="cred-badge">TED Talk</span>
-          <span class="cred-badge">Little People, BIG DREAMS</span>
+        <div class="already-signed-up" id="alreadySignedUp" hidden>
+          <p>You're already signed up &mdash; check your inbox.</p>
         </div>
       </div>
     </section>
 
     <!-- ═══════════════════════════════════
-         SOFT SUPPORT — gentle, not transactional
+         SECTION 5: EXPLORE MORE
     ═══════════════════════════════════ -->
-    <section class="soft-support" id="support" aria-labelledby="support-heading">
+    <section class="explore-section" id="explore" aria-labelledby="explore-heading">
       <div class="container">
-        <h2 id="support-heading">Moving Windmills is a small nonprofit.</h2>
-        <p>Everything you just read is real and still happening. If you want to know more, or help, the door's open.</p>
-        <a href="https://movingwindmills.org" target="_blank" rel="noopener" class="btn btn-outline" data-event="learn_more_click">movingwindmills.org</a>
+        <h2 id="explore-heading" class="section-heading animate-on-scroll">Keep exploring.</h2>
+
+        <div class="explore-grid animate-on-scroll">
+          <a href="https://www.amazon.com/dp/0147510422" target="_blank" rel="noopener" class="explore-card" data-event="explore_card_click">
+            <span class="explore-icon" aria-hidden="true">&#128214;</span>
+            <h3>Read the Book</h3>
+            <p>The full story in William's own words. Available for kids, young adults, and adults.</p>
+          </a>
+
+          <a href="https://www.netflix.com/title/80200047" target="_blank" rel="noopener" class="explore-card" data-event="explore_card_click">
+            <span class="explore-icon" aria-hidden="true">&#127916;</span>
+            <h3>Watch the Film</h3>
+            <p>The Netflix adaptation, directed by Chiwetel Ejiofor.</p>
+          </a>
+
+          <a href="https://movingwindmills.org/spark" target="_blank" rel="noopener" class="explore-card" data-event="explore_card_click">
+            <span class="explore-icon" aria-hidden="true">&#127979;</span>
+            <h3>Bring SPARK to Your School</h3>
+            <p>A free curriculum that brings William's story into your classroom.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         SECTION 6: SUPPORT THE WORK
+         Removable with .section-support { display: none; }
+    ═══════════════════════════════════ -->
+    <section class="section-support" id="support" aria-labelledby="support-heading">
+      <div class="container">
+        <div class="support-content animate-on-scroll">
+          <h2 id="support-heading">The table is always set.</h2>
+          <p>Across five community hubs, there's always room for one more. Another young person learning to build. Another conversation over tea. Another family at the table.</p>
+          <p>The people who make this possible aren't donors &mdash; they're part of the story.</p>
+          <p>If this is a story you want to be part of, we'd love to have you.</p>
+          <a href="https://donorbox.org/movingwindmills" target="_blank" rel="noopener" class="btn btn-primary" data-event="support_click">Be Part of It</a>
+          <p class="support-legal">Moving Windmills Project is a registered 501(c)(3). EIN: 26-2381809. Your gift is tax-deductible.</p>
+        </div>
       </div>
     </section>
 
   </main>
 
   <!-- ═══════════════════════════════════
-       FOOTER
+       SECTION 7: FOOTER
   ═══════════════════════════════════ -->
   <footer class="site-footer" id="footer">
     <div class="container">
@@ -301,15 +319,16 @@
         </div>
 
         <div class="footer-links">
-          <a href="https://movingwindmills.org" target="_blank" rel="noopener">Main Website</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Contact Us</a>
+          <a href="https://movingwindmills.org" target="_blank" rel="noopener">Learn More</a>
+          <a href="https://movingwindmills.org/spark" target="_blank" rel="noopener">SPARK Program</a>
+          <a href="#" rel="noopener">Privacy Policy</a>
+          <a href="#" rel="noopener">Contact</a>
         </div>
       </div>
 
       <div class="footer-legal">
-        <p>McDonald's, the Golden Arches logo, and Happy Meal are trademarks of McDonald's Corporation. Little People, BIG DREAMS is a trademark of Frances Lincoln Children's Books. Moving Windmills Project is an independent 501(c)(3) organization.</p>
         <p>Moving Windmills Project is a 501(c)(3) tax-exempt organization. Donations are tax-deductible to the extent allowed by law.</p>
+        <p>The Boy Who Harnessed the Wind is published by Penguin Random House and HarperCollins. The Problem-Solver's Guide was developed in partnership with the Royal Shakespeare Company.</p>
         <p>&copy; 2026 Moving Windmills Project. All rights reserved.</p>
       </div>
     </div>
