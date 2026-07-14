@@ -1380,12 +1380,29 @@ blockquote cite {
 
 /* ─── HERO ─── */
 .mwp-hero {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
   padding: var(--pad-top) var(--pad-side) var(--pad-bottom);
   background: #FFFFFF;
 }
 
 .mwp-hero-content {
-  max-width: 60%;
+  flex: 1;
+  max-width: 560px;
+}
+
+.mwp-hero-photo {
+  flex: 0 0 auto;
+  width: clamp(240px, 30vw, 400px);
+}
+
+.mwp-hero-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
 }
 
 .mwp-hero h1 {
@@ -1961,115 +1978,166 @@ blockquote cite {
   }
 }
 
-/* ─── STAY CONNECTED ─── */
-.mwp-connect {
+/* ─── STAY CONNECTED (dark editorial) ─── */
+.mwp-connect-dark {
   padding: var(--pad-top) var(--pad-side) var(--pad-bottom);
-  background: #FFFFFF;
+  background: var(--color-jewel);
 }
 
-.mwp-connect h2 {
-  font-family: var(--font-display);
-  font-size: var(--h2);
-  font-weight: 400;
-  color: #1B1B1B;
-  margin-bottom: 10px;
-}
-
-.mwp-connect-sub {
-  font-size: var(--body);
-  font-weight: 300;
-  color: #6B6B6B;
-  max-width: 520px;
-  margin-bottom: 32px;
-  line-height: 1.65;
-}
-
-.mwp-connect .form-row--inline {
+.mwp-connect-dark-inner {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.mwp-connect-dark-text h2 {
+  font-family: var(--font-display);
+  font-size: var(--h2);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--color-jewel-heading);
+  margin-bottom: 16px;
+}
+
+.mwp-connect-dark-text p {
+  font-size: var(--body);
+  font-weight: 300;
+  color: var(--color-jewel-text);
+  line-height: 1.65;
+  max-width: 520px;
+  margin-bottom: 12px;
+}
+
+.mwp-connect-dark-form {
   max-width: 480px;
 }
 
-.mwp-connect .form-input {
-  border: 1px solid #E0E0E0;
+.mwp-connect-dark-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mwp-connect-dark-form .form-input {
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 8px;
   padding: 14px 16px;
   font-size: var(--body);
   font-weight: 300;
   font-family: var(--font-body);
-  color: #1B1B1B;
-  background: #FFFFFF;
+  color: #FFFFFF;
+  background: rgba(255,255,255,0.08);
 }
 
-.mwp-connect .form-input::placeholder {
-  color: #AEAAA4;
+.mwp-connect-dark-form .form-input::placeholder {
+  color: rgba(255,255,255,0.4);
 }
 
-.mwp-connect .form-input:focus {
+.mwp-connect-dark-form .form-input:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: rgba(255,255,255,0.5);
 }
 
-.mwp-connect .form-success p,
-.mwp-connect .already-signed-up p {
-  color: var(--color-primary);
+.mwp-connect-dark-form .btn-primary {
+  background: rgba(255,255,255,0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.mwp-connect-dark-form .btn-primary:hover {
+  background: rgba(255,255,255,0.25);
+  color: #FFFFFF;
+}
+
+.mwp-connect-dark-form .form-success p,
+.mwp-connect-dark-form .already-signed-up p {
+  color: var(--color-primary-light);
   font-size: var(--body);
   padding: 16px 0;
 }
 
+.mwp-connect-dark-form .form-fine {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 12px;
+}
+
 @media (min-width: 768px) {
-  .mwp-connect .form-row--inline {
+  .mwp-connect-dark-form .form-row {
     flex-direction: row;
   }
 
-  .mwp-connect .form-row--inline .form-input {
+  .mwp-connect-dark-form .form-row .form-input {
     flex: 1;
   }
 
-  .mwp-connect .form-row--inline .btn-submit {
+  .mwp-connect-dark-form .form-row .btn-submit {
     white-space: nowrap;
   }
 }
 
-/* ─── SUPPORT (dark final CTA) ─── */
+@media (min-width: 900px) {
+  .mwp-connect-dark-inner {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .mwp-connect-dark-text {
+    flex: 1;
+  }
+
+  .mwp-connect-dark-form {
+    flex: 0 0 380px;
+    margin-top: 8px;
+  }
+}
+
+/* ─── SUPPORT (warm CTA on cream) ─── */
 .mwp-support {
   padding: var(--pad-top) var(--pad-side) var(--pad-bottom);
-  background: var(--color-jewel);
+  background: var(--color-cream);
+  text-align: center;
 }
 
 .mwp-support h2 {
   font-family: var(--font-display);
   font-size: var(--h2);
-  font-weight: 300;
-  color: var(--color-jewel-heading);
-  margin-bottom: 12px;
+  font-weight: 400;
+  color: #1B1B1B;
+  margin-bottom: 16px;
 }
 
 .mwp-support > p {
   font-size: var(--body);
   font-weight: 300;
-  color: var(--color-jewel-text);
-  max-width: 520px;
+  color: #6B6B6B;
+  max-width: 580px;
+  margin: 0 auto 12px;
   line-height: 1.65;
-  margin-bottom: 12px;
 }
 
-.mwp-support .btn-primary {
-  background: rgba(255,255,255,0.15);
-  color: #FFFFFF;
-  border: 1px solid rgba(255,255,255,0.25);
-  margin-top: 16px;
+.mwp-support-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
 }
 
-.mwp-support .btn-primary:hover {
-  background: rgba(255,255,255,0.25);
+.mwp-support .btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.mwp-support .btn-secondary:hover {
+  background: var(--color-primary);
   color: #FFFFFF;
 }
 
 .mwp-support-legal {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.35);
+  color: #999;
   margin-top: 32px;
 }
 
@@ -2095,6 +2163,14 @@ blockquote cite {
   font-weight: 400;
   color: rgba(255,255,255,0.85);
   margin-bottom: 12px;
+}
+
+.mwp-footer-tagline {
+  font-size: var(--body);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 16px;
 }
 
 .mwp-footer-info address,
@@ -2174,8 +2250,17 @@ blockquote cite {
 
 /* ─── Mobile adjustments ─── */
 @media (max-width: 767px) {
+  .mwp-hero {
+    flex-direction: column;
+  }
+
   .mwp-hero-content {
     max-width: 100%;
+  }
+
+  .mwp-hero-photo {
+    width: 100%;
+    max-width: 320px;
   }
 
   .mwp-nav-links a:not(.btn) {

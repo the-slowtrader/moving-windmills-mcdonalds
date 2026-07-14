@@ -57,6 +57,9 @@
       <p class="mwp-hero-sub">The Happy Meal book told his story. Here's what he's been building since &mdash; and a free activity guide for your family.</p>
       <a href="#story" class="btn btn-primary" data-event="hero_scroll_click">See what's happening now</a>
     </div>
+    <div class="mwp-hero-photo">
+      <img src="https://cdn.britannica.com/40/232340-050-F9D69EDF/William-Kamkwamba-2019.jpg" alt="William Kamkwamba" loading="eager">
+    </div>
   </header>
 
   <!-- QUOTE — at the top per Gemma's feedback -->
@@ -256,37 +259,48 @@
       </div>
     </section>
 
-    <!-- STAY CONNECTED -->
-    <section class="mwp-connect" id="stay-connected" aria-labelledby="connect-heading">
-      <h2 id="connect-heading">Follow the story as it unfolds</h2>
-      <p class="mwp-connect-sub">Updates from the community hubs and the team behind them.</p>
-
-      <form class="email-form" id="connectForm" action="MAILCHIMP_URL" method="POST" novalidate>
-        <input type="hidden" name="MERGE_SOURCE" value="mcd-happymeal-2026">
-        <div class="form-row form-row--inline">
-          <label for="connect-email" class="sr-only">Email address</label>
-          <input type="email" id="connect-email" name="EMAIL" placeholder="Your email" required autocomplete="email" class="form-input">
-          <button type="submit" class="btn btn-primary btn-submit">
-            <span class="btn-text">Stay connected &rarr;</span>
-            <span class="btn-loading" aria-hidden="true">Sending...</span>
-          </button>
+    <!-- STAY CONNECTED — dark, editorial -->
+    <section class="mwp-connect-dark" id="stay-connected" aria-labelledby="connect-heading">
+      <div class="mwp-connect-dark-inner">
+        <div class="mwp-connect-dark-text">
+          <h2 id="connect-heading">This story isn't finished</h2>
+          <p>Right now, a young engineer in Kasungu is wiring a solar panel for the first time. A farmer is testing a new irrigation technique. Someone's grandmother is sharing a meal she didn't have to worry about.</p>
+          <p>We send updates when something real happens &mdash; not on a schedule.</p>
         </div>
-        <p class="form-error" role="alert" aria-live="polite"></p>
-      </form>
-      <div class="form-success" id="connectSuccess" hidden>
-        <p>You're signed up &mdash; check your inbox.</p>
-      </div>
-      <div class="already-signed-up" id="alreadySignedUp" hidden>
-        <p>You're already signed up &mdash; check your inbox.</p>
+        <div class="mwp-connect-dark-form">
+          <form class="email-form" id="connectForm" action="MAILCHIMP_URL" method="POST" novalidate>
+            <input type="hidden" name="MERGE_SOURCE" value="mcd-happymeal-2026">
+            <div class="form-row">
+              <label for="connect-email" class="sr-only">Email address</label>
+              <input type="email" id="connect-email" name="EMAIL" placeholder="Your email" required autocomplete="email" class="form-input">
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span class="btn-text">Keep me in the loop &rarr;</span>
+                <span class="btn-loading" aria-hidden="true">Sending...</span>
+              </button>
+            </div>
+            <p class="form-error" role="alert" aria-live="polite"></p>
+          </form>
+          <div class="form-success" id="connectSuccess" hidden>
+            <p>You're in &mdash; check your inbox.</p>
+          </div>
+          <div class="already-signed-up" id="alreadySignedUp" hidden>
+            <p>You're already signed up &mdash; check your inbox.</p>
+          </div>
+          <p class="form-fine">No spam. Just real news from real people. Unsubscribe anytime.</p>
+        </div>
       </div>
     </section>
 
-    <!-- SUPPORT — Dark final CTA -->
+    <!-- SUPPORT — warm, non-transactional -->
     <section class="mwp-support" id="support" aria-labelledby="support-heading">
-      <h2 id="support-heading">Be part of what comes next</h2>
-      <p>The people who make this possible aren't donors &mdash; they're part of the story. If this is a story you want to be part of, we'd love to have you.</p>
-      <a href="https://donorbox.org/movingwindmills" target="_blank" rel="noopener" class="btn btn-primary" data-event="support_click">Be part of it</a>
-      <p class="mwp-support-legal">Moving Windmills Project is a registered 501(c)(3). EIN: 26-2381809. Your gift is tax-deductible.</p>
+      <h2 id="support-heading">If this story moved you</h2>
+      <p>William started with scrap parts and a library book. The people around him &mdash; the ones who believed before anyone else did &mdash; are the reason any of this exists.</p>
+      <p>That's still how it works. Every meal served, every workshop opened, every young person who stays to learn instead of leaving &mdash; it happens because someone chose to be part of it.</p>
+      <div class="mwp-support-ctas">
+        <a href="https://donorbox.org/movingwindmills" target="_blank" rel="noopener" class="btn btn-primary" data-event="support_click">Support the work</a>
+        <a href="https://movingwindmills.org" target="_blank" rel="noopener" class="btn btn-secondary">Learn more about MWP</a>
+      </div>
+      <p class="mwp-support-legal">Moving Windmills Project is a registered 501(c)(3). EIN: 26-2381809.</p>
     </section>
 
   </main>
@@ -296,17 +310,17 @@
     <div class="mwp-footer-top">
       <div class="mwp-footer-info">
         <div class="mwp-footer-logo">Moving Windmills Project</div>
+        <p class="mwp-footer-tagline">Building from where the windmill started.</p>
         <address>
           12 W 37th Street, Room 502<br>
           New York, NY 10018
         </address>
-        <p>EIN: 26-2381809</p>
       </div>
       <div class="mwp-footer-links">
-        <a href="https://movingwindmills.org" target="_blank" rel="noopener">Learn More</a>
+        <a href="https://movingwindmills.org" target="_blank" rel="noopener">About MWP</a>
         <a href="https://movingwindmills.org/spark" target="_blank" rel="noopener">SPARK Program</a>
-        <a href="#" rel="noopener">Privacy Policy</a>
-        <a href="#" rel="noopener">Contact</a>
+        <a href="https://www.netflix.com/title/80200047" target="_blank" rel="noopener">Watch the Film</a>
+        <a href="https://www.amazon.com/dp/0147510422" target="_blank" rel="noopener">Read the Book</a>
       </div>
       <div class="mwp-footer-social">
         <a href="https://instagram.com/movingwindmills" target="_blank" rel="noopener" aria-label="Instagram">
@@ -321,9 +335,8 @@
       </div>
     </div>
     <div class="mwp-footer-legal">
-      <p>Moving Windmills Project is a 501(c)(3) tax-exempt organization. Donations are tax-deductible to the extent allowed by law.</p>
-      <p>The Boy Who Harnessed the Wind is published by Penguin Random House and HarperCollins. The Problem-Solver's Guide was developed in partnership with the Royal Shakespeare Company.</p>
-      <p>&copy; 2026 Moving Windmills Project. All rights reserved.</p>
+      <p>&copy; 2026 Moving Windmills Project &middot; 501(c)(3) &middot; EIN: 26-2381809</p>
+      <p>The Boy Who Harnessed the Wind is published by Penguin Random House and HarperCollins. The Problem-Solver's Guide was developed with the Royal Shakespeare Company.</p>
     </div>
   </footer>
 
