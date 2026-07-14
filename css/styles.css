@@ -1381,28 +1381,33 @@ blockquote cite {
 /* ─── HERO ─── */
 .mwp-hero {
   display: flex;
-  align-items: center;
-  gap: clamp(2rem, 4vw, 4rem);
-  padding: var(--pad-top) var(--pad-side) var(--pad-bottom);
+  align-items: stretch;
+  min-height: 80vh;
+  padding: 0;
   background: #FFFFFF;
+  overflow: hidden;
 }
 
 .mwp-hero-content {
   flex: 1;
   max-width: 560px;
+  padding: var(--pad-top) 0 var(--pad-bottom) var(--pad-side);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .mwp-hero-photo {
-  flex: 0 0 auto;
-  width: clamp(240px, 30vw, 400px);
+  flex: 1;
+  margin-left: clamp(2rem, 4vw, 4rem);
 }
 
 .mwp-hero-photo img {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  height: 100%;
   display: block;
   object-fit: cover;
+  border-radius: 12px 0 0 12px;
 }
 
 .mwp-hero h1 {
@@ -2252,15 +2257,21 @@ blockquote cite {
 @media (max-width: 767px) {
   .mwp-hero {
     flex-direction: column;
+    min-height: auto;
   }
 
   .mwp-hero-content {
     max-width: 100%;
+    padding: var(--pad-top) var(--pad-side) 2rem;
   }
 
   .mwp-hero-photo {
-    width: 100%;
-    max-width: 320px;
+    margin-left: 0;
+    height: 50vh;
+  }
+
+  .mwp-hero-photo img {
+    border-radius: 0;
   }
 
   .mwp-nav-links a:not(.btn) {
