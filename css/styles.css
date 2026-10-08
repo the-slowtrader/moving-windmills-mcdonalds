@@ -1271,32 +1271,36 @@ blockquote cite {
 
 
 /* ═══════════════════════════════════
-   MWP BRAND THEME — v4 (book.html)
-   1:1 structure match to lesamis.cc.
+   MWP BRAND THEME — v5 (book.html)
+   Matches movingwindmills.org brand.
    Applied via <body class="mwp-brand">.
 ═══════════════════════════════════ */
 
 .mwp-brand {
-  --color-primary:       #2D6A4F;
-  --color-primary-dark:  #1B4332;
-  --color-primary-light: #C1D8CD;
-  --color-cream:         #F8F8F6;
-  --color-jewel:         #1B4332;
-  --color-jewel-text:    #CFDFCF;
-  --color-jewel-heading: #D8E8D8;
-  --pad-top:    clamp(5rem, 9vw, 110px);
-  --pad-bottom: clamp(6rem, 11vw, 140px);
+  --color-primary:       #CC5522;
+  --color-primary-dark:  #A84418;
+  --color-primary-light: #F5E6D0;
+  --color-accent:        #D5E489;
+  --color-accent-dark:   #6A724A;
+  --color-cream:         #FBF7F2;
+  --color-warm:          #CC5522;
+  --color-warm-light:    #E8824A;
+  --color-warm-text:     #FFF5EE;
+  --font-brand:          'Source Sans 3', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  --pad-top:    clamp(4rem, 7vw, 80px);
+  --pad-bottom: clamp(4rem, 7vw, 80px);
   --pad-side:   clamp(1.5rem, 5.5vw, 80px);
-  --h1:         clamp(2.75rem, 4.8vw, 3.5rem);
-  --h2:         clamp(2rem, 3.6vw, 2.625rem);
+  --h1:         clamp(2.25rem, 4.2vw, 3rem);
+  --h2:         clamp(1.75rem, 3.2vw, 2.25rem);
   --h3:         clamp(1.125rem, 1.6vw, 1.25rem);
-  --body:       clamp(0.875rem, 1.15vw, 0.9375rem);
-  --body-lg:    clamp(1rem, 1.5vw, 1.25rem);
+  --body:       clamp(0.9375rem, 1.15vw, 1rem);
+  --body-lg:    clamp(1.0625rem, 1.5vw, 1.25rem);
   background: #FFFFFF;
-  font-weight: 300;
+  font-family: var(--font-brand);
+  font-weight: 400;
   font-size: var(--body);
   line-height: 1.6;
-  color: #1B1B1B;
+  color: #333;
 }
 
 .mwp-brand a {
@@ -1310,38 +1314,45 @@ blockquote cite {
 
 /* --- Buttons --- */
 .mwp-brand .btn {
-  border-radius: 8px;
+  border-radius: 6px;
   min-height: auto;
-  font-weight: 400;
+  font-family: var(--font-brand);
+  font-weight: 600;
   font-size: var(--body);
-  padding: 14px 24px;
-  letter-spacing: normal;
-  transition: background 0.2s;
+  padding: 14px 28px;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.15s;
   box-shadow: none;
   border: none;
+  text-transform: none;
 }
 
 .mwp-brand .btn-primary {
-  background: var(--color-primary-light);
-  color: #1B1B1B;
+  background: var(--color-primary);
+  color: #FFFFFF;
 }
 
 .mwp-brand .btn-primary:hover {
-  background: #A8CCBA;
-  color: #1B1B1B;
+  background: var(--color-primary-dark);
+  color: #FFFFFF;
   transform: none;
   box-shadow: none;
 }
 
 .mwp-brand .btn-secondary {
   background: transparent;
-  color: #1B1B1B;
-  border: 1px solid #E0E0E0;
+  color: #333;
+  border: 1px solid #DDD;
 }
 
 .mwp-brand .btn-secondary:hover {
-  border-color: #BDBDBD;
-  background: #F8F8F6;
+  border-color: #BBB;
+  background: var(--color-cream);
+}
+
+.mwp-brand .btn-large {
+  padding: 18px 40px;
+  font-size: var(--body-lg);
 }
 
 /* ─── NAV ─── */
@@ -1354,10 +1365,10 @@ blockquote cite {
 }
 
 .mwp-nav-logo {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: 1.125rem;
-  font-weight: 400;
-  color: #1B1B1B;
+  font-weight: 700;
+  color: #333;
   letter-spacing: -0.01em;
 }
 
@@ -1369,8 +1380,8 @@ blockquote cite {
 
 .mwp-nav-links a {
   font-size: var(--body);
-  font-weight: 400;
-  color: #1B1B1B;
+  font-weight: 600;
+  color: #333;
 }
 
 .mwp-nav-links .btn {
@@ -1411,47 +1422,47 @@ blockquote cite {
 }
 
 .mwp-hero h1 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h1);
-  font-weight: 400;
-  line-height: 1.2;
-  color: #1B1B1B;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #333;
   margin-bottom: 16px;
 }
 
 .mwp-hero-sub {
   font-size: var(--body-lg);
-  font-weight: 300;
-  color: #1B1B1B;
-  line-height: 1.5;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.55;
   max-width: 520px;
   margin-bottom: 24px;
 }
 
 /* ─── HERO QUOTE ─── */
 .mwp-hero-quote {
-  padding: clamp(3rem, 6vw, 5rem) var(--pad-side);
-  background: var(--color-cream);
+  padding: clamp(2.5rem, 5vw, 4rem) var(--pad-side);
+  background: var(--color-primary-light);
   text-align: center;
 }
 
 .mwp-hero-quote blockquote {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
-  font-weight: 400;
+  font-weight: 600;
   font-style: italic;
   line-height: 1.3;
-  color: #1B1B1B;
+  color: var(--color-primary-dark);
   max-width: 640px;
   margin: 0 auto 16px;
 }
 
 .mwp-hero-quote cite {
-  font-family: var(--font-body);
+  font-family: var(--font-brand);
   font-size: var(--body);
   font-weight: 400;
   font-style: normal;
-  color: #999;
+  color: var(--color-primary);
 }
 
 /* ─── PHOTO BAND ─── */
@@ -1518,7 +1529,7 @@ blockquote cite {
 }
 
 .mwp-logo-item {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: 1rem;
   font-weight: 400;
   color: #999;
@@ -1539,7 +1550,7 @@ blockquote cite {
 }
 
 .mwp-tile-text h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
   font-weight: 400;
   line-height: 1.2;
@@ -1591,7 +1602,7 @@ blockquote cite {
 /* ─── IMPACT COUNTER ─── */
 .mwp-impact {
   padding: clamp(3rem, 5vw, 4rem) var(--pad-side);
-  background: var(--color-jewel);
+  background: var(--color-primary);
 }
 
 .mwp-impact-grid {
@@ -1608,17 +1619,17 @@ blockquote cite {
 }
 
 .mwp-impact-num {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 400;
-  color: var(--color-jewel-heading);
+  font-weight: 700;
+  color: #FFFFFF;
   line-height: 1;
 }
 
 .mwp-impact-label {
   font-size: var(--body);
-  font-weight: 300;
-  color: var(--color-jewel-text);
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
 }
 
 @media (min-width: 768px) {
@@ -1640,7 +1651,7 @@ blockquote cite {
 }
 
 .mwp-dark h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
   font-weight: 300;
   line-height: 1.2;
@@ -1683,7 +1694,7 @@ blockquote cite {
 }
 
 .mwp-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h3);
   font-weight: 400;
   color: var(--color-jewel-heading);
@@ -1725,7 +1736,7 @@ blockquote cite {
 }
 
 .mwp-spark-text h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
   font-weight: 400;
   line-height: 1.2;
@@ -1775,7 +1786,7 @@ blockquote cite {
 }
 
 .mwp-journey h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
   font-weight: 400;
   line-height: 1.2;
@@ -1790,7 +1801,7 @@ blockquote cite {
 }
 
 .mwp-step-num {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: 2.5rem;
   font-weight: 400;
   color: var(--color-primary-light);
@@ -1799,7 +1810,7 @@ blockquote cite {
 }
 
 .mwp-step h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h3);
   font-weight: 400;
   color: #1B1B1B;
@@ -1834,11 +1845,11 @@ blockquote cite {
 }
 
 .mwp-download-text h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
-  color: #1B1B1B;
+  color: #333;
   margin-bottom: 12px;
 }
 
@@ -1869,13 +1880,17 @@ blockquote cite {
   padding: 14px 16px;
   font-size: var(--body);
   font-weight: 300;
-  font-family: var(--font-body);
+  font-family: var(--font-brand);
   color: #1B1B1B;
   background: #FFFFFF;
 }
 
 .mwp-download .form-input::placeholder {
   color: #AEAAA4;
+}
+
+.mwp-download .form-input {
+  font-family: var(--font-brand);
 }
 
 .mwp-download .form-input:focus {
@@ -1955,7 +1970,7 @@ blockquote cite {
 }
 
 .mwp-explore h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
   font-weight: 400;
   color: #1B1B1B;
@@ -1982,7 +1997,7 @@ blockquote cite {
 }
 
 .mwp-explore-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h3);
   font-weight: 400;
   color: #1B1B1B;
@@ -2009,7 +2024,7 @@ blockquote cite {
 }
 
 .mwp-press h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
   font-weight: 400;
   color: #1B1B1B;
@@ -2029,7 +2044,7 @@ blockquote cite {
 }
 
 .mwp-press-quote p {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   font-weight: 400;
   line-height: 1.5;
@@ -2038,7 +2053,7 @@ blockquote cite {
 }
 
 .mwp-press-quote cite {
-  font-family: var(--font-body);
+  font-family: var(--font-brand);
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
@@ -2066,10 +2081,10 @@ blockquote cite {
   }
 }
 
-/* ─── STAY CONNECTED (dark editorial) ─── */
+/* ─── STAY CONNECTED ─── */
 .mwp-connect-dark {
   padding: var(--pad-top) var(--pad-side) var(--pad-bottom);
-  background: var(--color-jewel);
+  background: var(--color-primary-dark);
 }
 
 .mwp-connect-dark-inner {
@@ -2079,18 +2094,18 @@ blockquote cite {
 }
 
 .mwp-connect-dark-text h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.2;
-  color: var(--color-jewel-heading);
+  color: #FFFFFF;
   margin-bottom: 16px;
 }
 
 .mwp-connect-dark-text p {
   font-size: var(--body);
-  font-weight: 300;
-  color: var(--color-jewel-text);
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
   line-height: 1.65;
   max-width: 520px;
   margin-bottom: 12px;
@@ -2112,7 +2127,7 @@ blockquote cite {
   padding: 14px 16px;
   font-size: var(--body);
   font-weight: 300;
-  font-family: var(--font-body);
+  font-family: var(--font-brand);
   color: #FFFFFF;
   background: rgba(255,255,255,0.08);
 }
@@ -2188,7 +2203,7 @@ blockquote cite {
 }
 
 .mwp-support h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: var(--h2);
   font-weight: 400;
   color: #1B1B1B;
@@ -2246,9 +2261,9 @@ blockquote cite {
 }
 
 .mwp-footer-logo {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 700;
   color: rgba(255,255,255,0.85);
   margin-bottom: 12px;
 }
@@ -2315,6 +2330,103 @@ blockquote cite {
   }
 }
 
+/* ─── BRIDGE THE GAP (donation CTA) ─── */
+.mwp-bridge {
+  padding: var(--pad-top) var(--pad-side) var(--pad-bottom);
+  background: var(--color-cream);
+}
+
+.mwp-bridge-inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mwp-bridge-text h2 {
+  font-family: var(--font-brand);
+  font-size: var(--h2);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.mwp-bridge-text p {
+  font-size: var(--body-lg);
+  font-weight: 400;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.mwp-bridge-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.mwp-bridge-legal {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* ─── STORY (brief context section) ─── */
+.mwp-story {
+  padding: var(--pad-top) var(--pad-side) var(--pad-bottom);
+  background: #FFFFFF;
+}
+
+.mwp-story-inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.mwp-story-img img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.mwp-story-text h2 {
+  font-family: var(--font-brand);
+  font-size: var(--h2);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.mwp-story-text p {
+  font-size: var(--body);
+  font-weight: 400;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 12px;
+  max-width: 520px;
+}
+
+@media (min-width: 900px) {
+  .mwp-story-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .mwp-story-img {
+    flex: 1;
+  }
+
+  .mwp-story-text {
+    flex: 1;
+  }
+}
+
 /* ─── Shared: image placeholders ─── */
 .mwp-brand .img-placeholder {
   width: 100%;
@@ -2366,25 +2478,24 @@ blockquote cite {
     height: 300px;
   }
 
-  .mwp-tile-img {
+  .mwp-story-img {
     order: -1;
   }
 }
 
 /* ─── Print ─── */
 @media print {
-  .mwp-dark,
-  .mwp-support {
+  .mwp-impact,
+  .mwp-connect-dark {
     background: #FFFFFF;
-    color: #1B1B1B;
+    color: #333;
   }
 
-  .mwp-dark h2,
-  .mwp-dark h3,
-  .mwp-dark p,
-  .mwp-support h2,
-  .mwp-support p {
-    color: #1B1B1B;
+  .mwp-impact-num,
+  .mwp-impact-label,
+  .mwp-connect-dark-text h2,
+  .mwp-connect-dark-text p {
+    color: #333;
   }
 
   .mwp-photo-band {
